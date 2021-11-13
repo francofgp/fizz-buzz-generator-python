@@ -3,7 +3,6 @@ from art import text2art
 from rich.console import Console
 from rich.prompt import Prompt
 from rich.theme import Theme
-from rich.markdown import Markdown
 
 TITLE = """
 # Welcome to
@@ -30,6 +29,12 @@ console = Console(theme=custom_theme)
 
 
 def print_fizz_buzz(text_to_print: str):
+    """It prints what you want, if the text_to_print argument is "Fizz", "Buzz","FizzBuzz",
+    or whatever, it will print with an unique style for each
+
+    Args:
+        text_to_print (str): what you want to print
+    """
     font = {
         "Fizz": "clr7x8",
         "Buzz": "clr7x8",
@@ -54,34 +59,27 @@ def print_fizz_buzz(text_to_print: str):
         return
 
 
-def fizzBuzz(num: int):
+def fizzBuzz(num: int) -> str:
+    """It returns Fizz, Buzz, FizzBuzz or the number that you passed
+    if is divisible by 3, 5, 3 or 5, or the number if it is none of the later
 
-    if num % 3 == 0 and num % 5 == 0:
-        return "FizzBuzz"
-    if num % 3 == 0:
-        return "Fizz"
-    if num % 5 == 0:
-        return "Buzz"
-    return str(num)
+    Args:
+        num (int): The number that you want to use for the FizzBuzz algorith
+
+    Returns:
+        str: Fizz, Buzz, FizzBuzz or the number that you passed as a string
+        if is divisible by 3, 5, 3 or 5, respectively
+    """
+    return "Fizz"*(num % 3 == 0) + "Buzz"*(num % 5 == 0) or str(num)
 
 
-def show_title():
+def title_printer(*args):
+    """Print the arguments that you pass
+    """
     TITLE_FONT = "standard"
-    console.print(text2art(text="Welcome  to  the",
-                           font=TITLE_FONT), style="normal")
-    console.print(text2art(text="Fizz  Buzz",
-                  font=TITLE_FONT), style="FizzBuzz")
-    console.print(text2art(text="Generator", font=TITLE_FONT), style="normal")
-
-
-def good_bye():
-    TITLE_FONT = "standard"
-    console.print(text2art(text="That's",
-                           font=TITLE_FONT), style="normal")
-    console.print(text2art(text="all",
-                           font=TITLE_FONT), style="normal")
-    console.print(text2art(text="Folks",
-                  font=TITLE_FONT), style="FizzBuzz")
+    for arg in args:
+        console.print(text2art(text=arg,
+                               font=TITLE_FONT), style="normal")
 
 
 def execute_fizz_buzz():
@@ -101,9 +99,9 @@ def execute_fizz_buzz():
 
 
 def run_fizz_buzz():
-    show_title()
+    title_printer("Welcome to the", "Fizz Buzz", "Generator")
     execute_fizz_buzz()
-    good_bye()
+    title_printer("That's", "all", "Folks")
     pass
 
 
