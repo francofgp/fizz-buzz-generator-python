@@ -78,7 +78,7 @@ def good_bye():
     TITLE_FONT = "standard"
     console.print(text2art(text="That's",
                            font=TITLE_FONT), style="normal")
-    console.print(text2art(text="That's",
+    console.print(text2art(text="all",
                            font=TITLE_FONT), style="normal")
     console.print(text2art(text="Folks",
                   font=TITLE_FONT), style="FizzBuzz")
