@@ -6,6 +6,7 @@ name = "pypi"
 [packages]
 rich = "*"
 art = "*"
+pyinstaller = "*"
 
 [dev-packages]
 ipykernel = "*"

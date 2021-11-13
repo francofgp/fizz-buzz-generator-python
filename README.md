@@ -47,30 +47,32 @@ python main.py
 ```
 
 
-<!-- ## [Usage](#Usage)
+## [Usage](#Usage)
 
 ---
 
-To use the program just execute the .exe file
+To use the program just execute the main.exe file (It is likely to be detected as a virus by your browser, but don't worry)
 
-![Alt](https://i.imgur.com/mlmsfIo.gif "Optional title")
+![Alt](/images/gif_fizz_buzz_generator.gif)
 
-Your can also, use the following command to run the program in every platform:
+Or in your terminal
 
 ```bash
-dotnet run
-``` -->
-<!-- 
-### [OS](#OS)
+main.exe
+``` 
 
+
+### [OS](#OS)
 ---
 
 The program was tested only in Windows 10, if you want to try on another Windows or Operative System, let me know.
+On Windows both the (ancient) cmd.exe terminal is supported and the new Windows Terminal. The later has much improved support for color and style.
+If you use cmd.exe you will not see the colors nor styling, please use the new Windows Terminal instead.
 Thanks.
 
 Pull requests are welcome. For major changes, please open an issue first to discuss what you would like to change.
 
-Please make sure to update tests as appropriate. -->
+Please make sure to update tests as appropriate. 
 
 ### [Acknowledgements](#Acknowledgements)
 
